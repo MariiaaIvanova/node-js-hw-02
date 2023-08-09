@@ -1,12 +1,14 @@
-const ctrlWrapper = (ctrl) => {
-  const func = async (req, res, next) => {
-    try {
-      await ctrl(req, res, next);
-    } catch (error) {
-      next(error);
-    }
-  };
-  return func;
+const errorMessages = {
+  400: "Bad Request",
+  401: "Unauthorized",
+  403: "Forbidden",
+  404: "Not Found",
+  409: "Conflict",
 };
 
-module.exports = { ctrlWrapper };
+const HttpError = (status, message = errorMessages[status]) => {
+  const error = new Error(message);
+  error.status = status;
+  return error;
+};
+module.exports = HttpError;

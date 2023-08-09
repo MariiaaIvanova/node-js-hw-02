@@ -41,6 +41,7 @@ const updateContact = async (req, res) => {
   res.json(result);
 };
 
+
 module.exports = {
   getAll: ctrlWrapper(getAll),
   getContactById: ctrlWrapper(getContactById),

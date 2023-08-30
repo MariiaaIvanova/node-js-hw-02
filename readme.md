@@ -31,4 +31,4 @@
 - `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
 
 
-mongodb+srv://admin:maria2727@cluster0.ijwwfgf.mongodb.net/db-contacts?retryWrites=true&w=majority
+mongodb+srv://admin:OabqxKKgol6DCgoj@cluster0.ijwwfgf.mongodb.net/db-contacts?retryWrites=true&w=majority

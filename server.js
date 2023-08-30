@@ -1,7 +1,7 @@
 const { mongoose } = require("mongoose");
 const app = require("./app");
 
-const PORT = 3001;
+const PORT = 3000;
 
 const { PASSWORD, DB_USERNAME, CLASTERNAME, DB_NAME } = process.env;
 
@@ -11,7 +11,7 @@ mongoose.set("strictQuery", true);
 mongoose
   .connect(DB_HOST)
   .then(() => {
-    console.log("connect succesfull");
+    console.log("Connect succesfull");
     app.listen(PORT, () => {
       console.log(`Server running. Use our API on port: ${PORT}`);
     });
